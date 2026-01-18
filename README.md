@@ -89,6 +89,21 @@ appium driver list --installed
 3. Connect device via USB
 4. Verify connection: `adb devices`
 
+Don't forget to add the capabilities.json also or can modify the existing file included in this project
+
+{
+    "android":{
+        "platformName": "Android",
+        "appium:automationName": "UiAutomator2",
+        "appium:deviceName": "Pixel 9 Pro",
+        "appium:app": "path\\to\\apk\\directory\\mda-1.0.13-15.apk",
+        "appium:autoGrantPermissions": true,
+        "appium:appWaitPackage": "com.saucelabs.mydemoapp.android",
+        "appium:appWaitActivity": "com.saucelabs.mydemoapp.android.view.activities.*",
+        "appium:appWaitDuration": 60000
+    }
+  }
+
 ### Step 3: Install Project Dependencies
 
 ```bash
